@@ -14,8 +14,8 @@ function About() {
         <ul>
           <h3>Fun Facts:</h3>
           <li>I have 3 cats</li>
-          <li>I have ran 2 marathons</li>
-          <li>I worked through college to graduate debt-free</li>
+          <li>I've completed 2 marathons</li>
+          <li>I am my own worst critic</li>
         </ul>
       </div>
     </section>

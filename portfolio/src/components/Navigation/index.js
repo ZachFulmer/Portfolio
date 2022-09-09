@@ -1,20 +1,14 @@
 import React from "react";
-import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav(props) {
   const {
-    categories = [],
-    setCurrentCategory,
-    currentCategory,
+    portfolioSelected,
+    setPortfolioSelected,
     contactSelected,
-    setContactSelected
+    setContactSelected,
+    resumeSelected,
+    setResumeSelected
   } = props;
-
-
-  const handleClick = (item) => {
-    console.log(item);
-    return item;
-  };
 
   return (
     <header className="flex-row px-1">
@@ -30,16 +24,22 @@ function Nav(props) {
               About me
             </a>
           </li>
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(false)}>Portfolio</span>
+          <li className={`mx-2 ${portfolioSelected && 'navActive'}`}>
+            <span onClick={() => {setContactSelected(false);
+                                  setPortfolioSelected(true);
+                                  setResumeSelected(false);}}>Portfolio</span>
           </li>
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
+            <span onClick={() => {setContactSelected(true);
+                                  setPortfolioSelected(false);
+                                  setResumeSelected(false);}}>Contact</span>
           </li>
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(false)}>Resume</span>
+          <li className={`mx-2 ${resumeSelected && 'navActive'}`}>
+            <span onClick={() => {setContactSelected(false);
+                                  setPortfolioSelected(false);
+                                  setResumeSelected(true);}}>Resume</span>
           </li>
-          {categories.map((category) => (
+          {/* {categories.map((category) => (
             <li
               className={`mx-1 ${
                 currentCategory.name === category.name && !contactSelected && `navActive`
@@ -54,7 +54,7 @@ function Nav(props) {
                 {capitalizeFirstLetter(category.name)}
               </span>
             </li>
-          ))}
+          ))} */}
         </ul>
       </nav>
     </header>
