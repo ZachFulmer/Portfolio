@@ -4,10 +4,10 @@ import headShotImage from "../../assets/images/ZachFulmerHeadShot.jpg";
 function About() {
 
   return (
-    <section className="my-5" >
+    <section className="my-3" >
       <h1 id="about">Zachary Austin Fulmer</h1>
       <img src={headShotImage} className="my-2" style={{width: "50%" }}alt="cover" />
-      <div className="my-2">
+      <div className="my-1">
         <p>
           First off, I want to thank you for visiting my page. My name is Zach Fulmer and I'm a 2018 Summa Cum Laude graduate from the University of Texas at San Antonio with a B.S. in Computer Engineering. For the last 4 years I have operated as an Embedded Hardware/Firmware engineer within the defense contractor industry. I'm currently seeking a role to break into web development to expand on my software skills and introduce creativity into products.
         </p>
